@@ -1,13 +1,13 @@
-package aoc;
+package days;
+
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Arrays;
+import static helpers.InputHandler.*;
 
 public class Day01 {
 
 	// 2Sum
-	public int part1(int[] arr, int sum) {
+	public static int partOne(int[] arr, int sum) {
 		int l = 0;
 		int r = arr.length - 1;
 		while (l < r) {
@@ -22,7 +22,7 @@ public class Day01 {
 	}
 
 	// 3Sum
-	public int part2(int[] arr, int sum) {
+	public static int partTwo(int[] arr, int sum) {
 		int l;
 		int r;
 		for (int i = 0; i < arr.length - 2; i++) {
@@ -41,12 +41,11 @@ public class Day01 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		int[] arr = Files.readAllLines(Paths.get("input/Day1.txt")).stream().mapToInt(Integer::valueOf).toArray();
+		int[] arr = asIntArray(1);
 		int sum = 2020;
-		Day01 prog = new Day01();
 
 		Arrays.sort(arr);
-		System.out.println(prog.part1(arr, sum));
-		System.out.println(prog.part2(arr, sum));
+		System.out.println("Part 1: " + partOne(arr, sum));
+		System.out.println("Part 2: " + partTwo(arr, sum));
 	}
 }
