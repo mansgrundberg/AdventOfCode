@@ -20,6 +20,10 @@ public class InputHandler {
 		return asStringStream(day).mapToInt(Integer::parseInt).toArray();
 	}
 	
+	public static long[] asLongArray(int day) {
+		return asStringStream(day).mapToLong(Long::parseLong).toArray();
+	}
+	
 	public static char[][] as2dCharArray(int day) {
 		return asStringStream(day).map(String::toCharArray).toArray(char[][]::new);
 	}
