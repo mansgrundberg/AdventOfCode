@@ -1,14 +1,14 @@
-package days;
+package aoc.y2020;
 
 import java.util.Arrays;
 import java.util.HashSet;
 
-import static helpers.InputHandler.*;
+import static aoc.common.InputHandler.*;
 
 public class Day09 {
 
 	public static void main(String[] args) {
-		long[] input = asLongArray(9);
+		long[] input = asLongArray(2020,9);
 		long nbr = partOne(input);
 		System.out.println("Part 1: " + nbr);
 		System.out.println("Part 2: " + partTwo(input, nbr));

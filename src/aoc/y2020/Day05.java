@@ -1,11 +1,11 @@
-package days;
+package aoc.y2020;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static helpers.InputHandler.*;
+import static aoc.common.InputHandler.*;
 
 public class Day05 {
 
@@ -33,7 +33,7 @@ public class Day05 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		String[] in = asStringArray(5);
+		String[] in = asStringArray(2020,5);
 		List<Integer> ids = new ArrayList<>();
 
 		for (String line : in) {

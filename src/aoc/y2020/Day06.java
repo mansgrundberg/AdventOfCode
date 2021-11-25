@@ -1,6 +1,6 @@
-package days;
+package aoc.y2020;
 
-import static helpers.InputHandler.*;
+import static aoc.common.InputHandler.*;
 
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 public class Day06 {
 
 	public static void main(String[] args) {
-		System.out.printf("Part 1: %d\n", partOne(asString(6).split("\n\n")));
-		 System.out.printf("Part 2: %d", partTwo(asString(6).split("\n\n")));
+		System.out.printf("Part 1: %d\n", partOne(asString(2020,6).split("\n\n")));
+		 System.out.printf("Part 2: %d", partTwo(asString(2020,6).split("\n\n")));
 	}
 
 	static int partOne(String[] in) {

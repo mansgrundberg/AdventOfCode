@@ -1,4 +1,4 @@
-package helpers;
+package aoc.common;
 
 public enum Direction {
     N(0, -1),

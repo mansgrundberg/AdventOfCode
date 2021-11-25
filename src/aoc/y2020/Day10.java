@@ -1,6 +1,6 @@
-package days;
+package aoc.y2020;
 
-import helpers.InputHandler;
+import aoc.common.InputHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 public class Day10 {
 
     static int partOne() {
-        List<Integer> adapters = InputHandler.asIntStream(10).sorted().collect(Collectors.toList());
+        List<Integer> adapters = InputHandler.asIntStream(2020,10).sorted().collect(Collectors.toList());
         adapters.add(0, 0);
 
         int ones = 0;
@@ -25,7 +25,7 @@ public class Day10 {
     }
 
     static long partTwo() {
-        List<Integer> adapters = InputHandler.asIntStream(10).sorted().collect(Collectors.toList());
+        List<Integer> adapters = InputHandler.asIntStream(2020,10).sorted().collect(Collectors.toList());
         int max = adapters.get(adapters.size() - 1) + 3;
         adapters.add(max);
         adapters.add(0, 0);

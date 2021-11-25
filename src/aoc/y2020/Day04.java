@@ -1,9 +1,9 @@
-package days;
+package aoc.y2020;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
-import static helpers.InputHandler.*;
+import static aoc.common.InputHandler.*;
 
 public class Day04 {
 	
@@ -38,7 +38,7 @@ public class Day04 {
 	}
 	
 	public static void main(String[] args) throws IOException {
-		String[] in = asString(4).split("\n\n");
+		String[] in = asString(2020,4).split("\n\n");
 		
 		int part1 = 0;
 		int part2 = 0;

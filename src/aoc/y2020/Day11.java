@@ -1,11 +1,10 @@
-package days;
+package aoc.y2020;
 
-import helpers.Direction;
-import helpers.InputHandler;
+import aoc.common.Direction;
+import aoc.common.InputHandler;
 
 import java.awt.*;
 import java.nio.CharBuffer;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Day11 {
@@ -18,7 +17,7 @@ public class Day11 {
         return solve(grid, 5, false);
     }
 
-    static int solve(char[][] grid, int limit, boolean onlyAdjacent) {
+    private static int solve(char[][] grid, int limit, boolean onlyAdjacent) {
         char[][] temp;
 
         do {
@@ -28,7 +27,6 @@ public class Day11 {
 
         return countOccupied(grid);
     }
-
 
     private static char[][] changeSeats(char[][] grid, int limit, boolean onlyAdjacent) {
         char[][] next = new char[grid.length][grid[0].length];
@@ -56,7 +54,7 @@ public class Day11 {
                         nbrOfOccupiedSeats++;
                     break;
                 }
-                p.move(p.x + dir.x, p.y + dir.y);
+                moveInDir(p, dir);
             }
         }
         return nbrOfOccupiedSeats;
@@ -69,12 +67,17 @@ public class Day11 {
     private static int countOccupied(char[][] seats) {
         return (int) Arrays.stream(seats).map(CharBuffer::wrap).flatMapToInt(CharBuffer::chars).filter(i -> i == '#').count();
     }
+
     private static boolean outOfBounds(char[][] grid, Point p) {
         return (p.x < 0 || p.x >= grid.length || p.y < 0 || p.y >= grid[p.x].length);
     }
 
+    private static void moveInDir(Point p, Direction d) {
+        p.move(p.x + d.x, p.y + d.y);
+    }
+
     public static void main(String[] args) {
-        char[][] grid = InputHandler.as2dCharArray(11);
+        char[][] grid = InputHandler.as2dCharArray(2020,11);
         System.out.println("Part 1:" + Day11.partOne(grid));
         System.out.println("Part 2:" + Day11.partTwo(grid));
     }

@@ -1,6 +1,6 @@
-package days;
+package aoc.y2020;
 
-import static helpers.InputHandler.*;
+import static aoc.common.InputHandler.*;
 
 import java.util.Arrays;
 
@@ -13,12 +13,12 @@ public class Day08 {
 	}
 
 	static int partOne() {
-		compute(asStringArray(8));
+		compute(asStringArray(2020,8));
 		return accumulator;
 	}
 
 	static int partTwo() {
-		String[] input = asStringArray(8);
+		String[] input = asStringArray(2020,8);
 
 		for (int i = 0; i < input.length; i++) {
 			if (!input[i].contains("acc")) {
