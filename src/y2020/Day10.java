@@ -1,6 +1,6 @@
-package aoc.y2020;
+package y2020;
 
-import aoc.common.InputHandler;
+import common.InputHandler;
 
 import java.util.List;
 import java.util.stream.Collectors;

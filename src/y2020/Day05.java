@@ -1,11 +1,11 @@
-package aoc.y2020;
+package y2020;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static aoc.common.InputHandler.*;
+import static common.InputHandler.*;
 
 public class Day05 {
 

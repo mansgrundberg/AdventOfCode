@@ -1,9 +1,9 @@
-package aoc.y2020;
+package y2020;
 
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
-import static aoc.common.InputHandler.*;
+import static common.InputHandler.*;
 
 public class Day04 {
 	

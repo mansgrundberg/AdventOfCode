@@ -1,7 +1,8 @@
-package aoc.y2020;
+package y2020;
+
+import common.InputHandler;
 
 import java.io.IOException;
-import static aoc.common.InputHandler.*;
 
 public class Day03 {
 
@@ -18,7 +19,7 @@ public class Day03 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		char[][] input = as2dCharArray(2020,3);
+		char[][] input = InputHandler.as2dCharArray(2020,3);
 
 		int part1 = trees(input, 3, 1);
 		long part2 = (long) trees(input, 1, 1) * trees(input, 5, 1) * trees(input, 7, 1) * trees(input, 1, 2)

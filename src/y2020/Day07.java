@@ -1,4 +1,6 @@
-package aoc.y2020;
+package y2020;
+
+import common.InputHandler;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -7,8 +9,6 @@ import java.util.Set;
 import java.util.Stack;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import static aoc.common.InputHandler.*;
 
 public class Day07 {
 	private static HashMap<String, Node> nodes = generateTree();
@@ -47,7 +47,7 @@ public class Day07 {
 		Pattern parent = Pattern.compile("(.+) bags contain (.+)\\.");
 		Pattern child = Pattern.compile("(\\d+?) (.+?) bags?");
 
-		String[] lines = asStringArray(2020,7);
+		String[] lines = InputHandler.asStringArray(2020,7);
 
 		for (String line : lines) {
 			Matcher matcher = parent.matcher(line);

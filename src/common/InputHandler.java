@@ -1,9 +1,10 @@
-package aoc.common;
+package common;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.List;
 import java.util.stream.Stream;
 
 public class InputHandler {
@@ -18,6 +19,10 @@ public class InputHandler {
 
     public static int[] asIntArray(int year, int day) {
     	return asStringStream(year, day).mapToInt(Integer::parseInt).toArray();
+    }
+
+    public static List<Integer> asIntList(int year, int day) {
+        return asIntStream(year, day).toList();
     }
 
     public static long[] asLongArray(int year, int day) {

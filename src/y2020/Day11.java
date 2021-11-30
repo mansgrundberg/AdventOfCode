@@ -1,7 +1,7 @@
-package aoc.y2020;
+package y2020;
 
-import aoc.common.Direction;
-import aoc.common.InputHandler;
+import common.Direction;
+import common.InputHandler;
 
 import java.awt.*;
 import java.nio.CharBuffer;

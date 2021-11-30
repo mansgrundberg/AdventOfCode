@@ -1,14 +1,14 @@
-package aoc.y2020;
+package y2020;
+
+import common.InputHandler;
 
 import java.io.IOException;
-
-import static aoc.common.InputHandler.*;
 
 public class Day02 {
 	
 	public static void main(String[] args) throws IOException {
-		long partOne = asStringStream(2020,2).map(Password::new).filter(Day02::partOne).count();
-		long partTwo = asStringStream(2020,2).map(Password::new).filter(Day02::partTwo).count();
+		long partOne = InputHandler.asStringStream(2020,2).map(Password::new).filter(Day02::partOne).count();
+		long partTwo = InputHandler.asStringStream(2020,2).map(Password::new).filter(Day02::partTwo).count();
 
 		System.out.printf("Part 1: %d\n", partOne);
 		System.out.printf("Part 2: %d", partTwo);

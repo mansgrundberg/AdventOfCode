@@ -1,8 +1,9 @@
-package aoc.y2020;
+package y2020;
+
+import common.InputHandler;
 
 import java.io.IOException;
 import java.util.Arrays;
-import static aoc.common.InputHandler.*;
 
 public class Day01 {
 
@@ -41,7 +42,7 @@ public class Day01 {
 	}
 
 	public static void main(String[] args) throws IOException {
-		int[] arr = asIntArray(2020,1);
+		int[] arr = InputHandler.asIntArray(2020,1);
 		int sum = 2020;
 
 		Arrays.sort(arr);
